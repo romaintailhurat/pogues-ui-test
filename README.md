@@ -2,6 +2,13 @@
 
 Automated UI tests for Pogues
 
+## Roadmap
+
+- use poetry for deps management
+- implement the Page object model in Python: https://www.lambdatest.com/blog/page-object-model-in-selenium-python/
+- use splinter over selenium: https://github.com/cobrateam/splinter
+
+
 ## How to use ?
 
 The supported environment for now is inside the SSP Datalab VS code service.
