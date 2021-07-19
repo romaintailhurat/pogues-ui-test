@@ -4,6 +4,8 @@ Automated UI tests for Pogues
 
 ## Roadmap
 
+- a general direction: using this as a reference setup for Python (see the setup script)
+
 - use poetry for deps management
 - implement the Page object model in Python: https://www.lambdatest.com/blog/page-object-model-in-selenium-python/
 - use splinter over selenium: https://github.com/cobrateam/splinter

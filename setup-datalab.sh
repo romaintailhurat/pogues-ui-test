@@ -17,3 +17,29 @@ unzip chromedriver_linux64.zip
 sudo mkdir /usr/bin/chromedriver
 sudo mv ./chromedriver /usr/bin/chromedriver
 rm ./chromedriver_linux64.zip
+
+echo Installing pyenv
+
+if [ -d "/home/coder/.pyenv" ]; then
+  rm -rf "/home/coder/.pyenv"
+fi
+
+curl https://pyenv.run | bash
+echo "" >> ~/.bashrc
+echo "export PYENV_ROOT=\"$HOME/.pyenv\"" >> ~/.bashrc
+. ~/.bashrc
+echo "export PATH=\"$PYENV_ROOT/bin:$PATH\"" >> ~/.bashrc
+. ~/.bashrc
+echo "$(pyenv init --path)" >> ~/.bashrc
+. ~/.bashrc
+
+echo Installing Poetry
+
+if [ -d "$HOME/.poetry/" ]; then
+  rm -rf "$HOME/.poetry/"
+fi
+
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+.  $HOME/.poetry/env
+echo "export PATH=\"$HOME/.poetry/bin:$PATH\"" >> ~/.bashrc
+. ~/.bashrc
