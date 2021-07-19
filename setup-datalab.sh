@@ -3,6 +3,7 @@
 echo Installing missing tools
 
 sudo apt-get install -y unzip
+sudo apt-get install zlib1g-dev
 
 echo Installing Chrome
 

@@ -4,8 +4,8 @@ Automated UI tests for Pogues
 
 ## Roadmap
 
-- a general direction: using this as a reference setup for Python (see the setup script)
-
+- a general direction: using [this](https://mitelman.engineering/blog/python-best-practice/automating-python-best-practices-for-a-new-project/) as a reference setup for Python (see the setup script)
+- use pyenv for python environment management
 - use poetry for deps management
 - implement the Page object model in Python: https://www.lambdatest.com/blog/page-object-model-in-selenium-python/
 - use splinter over selenium: https://github.com/cobrateam/splinter
@@ -21,13 +21,21 @@ Once the service instantiated, use the setup script to install various dependenc
 bash setup-datalab.sh
 ```
 
-Warning: the python dependencies are not yet managed (in the future it will be done by Poetry).
+WARNING: the following step in broken at the moment!
 
-So, manually, in a terminal:
+Then, the Python environment must be setup using:
 
 ```
-pip install pytest selenium
+bash setup-datalab.sh
 ```
+
+To install the required Python deps:
+
+```
+poetry install
+```
+
+At the moment, poetry create its own virtualenv ; in the future we would have pyenv to manage that...
 
 To check everything works, once again in a terminal :
 
