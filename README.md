@@ -21,7 +21,7 @@ Once the service instantiated, use the setup script to install various dependenc
 bash setup-datalab.sh
 ```
 
-WARNING: the following step in broken at the moment!
+:grimacing: WARNING: the following step in broken at the moment! :grimacing:
 
 Then, the Python environment must be setup using:
 
