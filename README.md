@@ -21,6 +21,8 @@ Once the service instantiated, use the setup script to install various dependenc
 bash setup-datalab.sh
 ```
 
+:grimacing: Manually play `. ~/.bashrc` (???)
+
 To install the required Python deps:
 
 ```

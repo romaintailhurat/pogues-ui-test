@@ -17,7 +17,5 @@ def suite_browser():
 
 def test_title_is_ok(suite_browser):
     hp = HomePage(browser = suite_browser)
-    hp.browser.visit("http://www.insee.fr")    
-    print(hp.browser.url)
-    #hp.browser.html
-    assert False
+    hp.browser.visit(hp.url)    
+    assert hp.browser.title == "Pogues"
