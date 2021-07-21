@@ -21,14 +21,6 @@ Once the service instantiated, use the setup script to install various dependenc
 bash setup-datalab.sh
 ```
 
-:grimacing: WARNING: the following step in broken at the moment! :grimacing:
-
-Then, the Python environment must be setup using:
-
-```
-bash setup-datalab.sh
-```
-
 To install the required Python deps:
 
 ```
@@ -40,5 +32,6 @@ At the moment, poetry create its own virtualenv ; in the future we would have py
 To check everything works, once again in a terminal :
 
 ```
-pytest test/
+# in pogues-ui-test dir
+poetry run pytest
 ```
