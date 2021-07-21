@@ -27,12 +27,10 @@ fi
 
 curl https://pyenv.run | bash
 echo "" >> ~/.bashrc
-echo "export PYENV_ROOT=\"$HOME/.pyenv\"" >> ~/.bashrc
-. ~/.bashrc
-echo "export PATH=\"$PYENV_ROOT/bin:$PATH\"" >> ~/.bashrc
-. ~/.bashrc
-echo "$(pyenv init --path)" >> ~/.bashrc
-. ~/.bashrc
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 echo Installing Poetry
 
@@ -42,5 +40,8 @@ fi
 
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 .  $HOME/.poetry/env
-echo "export PATH=\"$HOME/.poetry/bin:$PATH\"" >> ~/.bashrc
+
+echo "" >> ~/.bashrc
+echo "export PATH=\"$HOME/.poetry/bin:/usr/bin/chromedriver:$PATH\"" >> ~/.bashrc
+
 . ~/.bashrc
