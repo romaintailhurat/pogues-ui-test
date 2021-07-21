@@ -10,4 +10,4 @@ class HomePage:
     url: str = "https://pogues.dev.insee.io/"
 
     def get_title(self):
-        self.browser.title
+        return self.browser.title

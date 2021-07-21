@@ -18,4 +18,4 @@ def suite_browser():
 def test_title_is_ok(suite_browser):
     hp = HomePage(browser = suite_browser)
     hp.browser.visit(hp.url)    
-    assert hp.browser.title == "Pogues"
+    assert hp.get_title() == "Pogues"
