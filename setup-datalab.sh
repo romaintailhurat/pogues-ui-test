@@ -13,7 +13,7 @@ rm google-chrome-stable_current_amd64.deb
 
 echo Installing Chrome Driver
 
-wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
+wget https://chromedriver.storage.googleapis.com/92.0.4515.43/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 sudo mkdir /usr/bin/chromedriver
 sudo mv ./chromedriver /usr/bin/chromedriver
