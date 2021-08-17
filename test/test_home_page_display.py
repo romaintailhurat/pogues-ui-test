@@ -19,3 +19,10 @@ def test_title_is_ok(suite_browser):
     hp = HomePage(browser = suite_browser)
     hp.browser.visit(hp.url)    
     assert hp.get_title() == "Pogues"
+
+def test_questionnaires_list(suite_browser):
+    # FIXME code a real case
+    hp = HomePage(browser = suite_browser)
+    hp.browser.visit(hp.url)
+    questionnaires_list = hp.get_questionnaires_list()
+    assert len(questionnaires_list) > 0
