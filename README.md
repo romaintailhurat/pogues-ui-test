@@ -15,7 +15,7 @@ Automated UI tests for Pogues
 
 The supported environment for now is inside the SSP Datalab VS code service.
 
-Once the service instantiated, use the setup script to install various dependencies:
+Once the service instantiated, clone the repo then use the setup script to install various dependencies:
 
 ```
 bash setup-datalab.sh
