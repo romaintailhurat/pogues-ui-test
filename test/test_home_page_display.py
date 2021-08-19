@@ -20,9 +20,11 @@ def test_title_is_ok(suite_browser):
     hp.browser.visit(hp.url)    
     assert hp.get_title() == "Pogues"
 
-def test_questionnaires_list(suite_browser):
+def test_questionnaires_list_search_displays_the_right_item(suite_browser):
     # FIXME code a real case
     hp = HomePage(browser = suite_browser)
     hp.browser.visit(hp.url)
     questionnaires_list = hp.get_questionnaires_list()
-    assert len(questionnaires_list) > 0
+    first_questionnaire = questionnaires_list[0]
+    list_after_search = hp.search_questionnaire(first_questionnaire)
+    assert len(list_after_search) == 1 and list_after_search[0] == first_questionnaire

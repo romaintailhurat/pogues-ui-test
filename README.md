@@ -31,9 +31,15 @@ poetry install
 
 At the moment, poetry create its own virtualenv ; in the future we would have pyenv to manage that...
 
-To check everything works, once again in a terminal :
+To check everything works, once again in a terminal:
 
 ```
 # in pogues-ui-test dir
 poetry run pytest
+```
+
+In order to have `print` statement displayed, run:
+
+```
+poetry run pytest -s
 ```

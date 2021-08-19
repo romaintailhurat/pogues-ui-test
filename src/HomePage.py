@@ -14,5 +14,13 @@ class HomePage:
 
     def get_questionnaires_list(self):
         questionnaires_list_elements = self.browser.find_by_css(".question-list-item-name > a")
-        names = [qle.text for qle in questionnaires_list_elements]        
+        names = [element.text for element in questionnaires_list_elements]        
         return names
+
+    def search_questionnaire(self, name: str):
+        name = name.lower() # FIXME search using uppercase letters doesn't work ?!
+        search_input = self.browser.find_by_css("#questionnaire-list .ctrl-input input")
+        search_input.fill(name)
+        return self.get_questionnaires_list()
+
+    
