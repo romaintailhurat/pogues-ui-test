@@ -23,4 +23,8 @@ class HomePage:
         search_input.fill(name)
         return self.get_questionnaires_list()
 
+    def create_questionnaire(self, name = "ui-test-questionnaire", id = "UI_TEST_QUESTIONNAIRE"):
+        # TODO waiting for the test application to be debugged =(
+        pass
+
     
